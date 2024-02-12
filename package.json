@@ -1,0 +1,19 @@
+{
+  "name": "musicplayer",
+  "productName": "musicplayer",
+  "version": "1.0.0",
+  "description": "An app to play music",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Erick Gaceta",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^28.2.2",
+    "toastify-js": "^1.12.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
