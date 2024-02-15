@@ -1,14 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
+
+    <link rel="stylesheet" href="output.css">
+
+    <style>
+        body{
+            background-color: #0c0c0c;
+            padding: 0;
+            margin: 0;
+        }
+
+        #buttons{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #repeat, #prev, #play, #next, #shuffle{
+            border: solid 1px #6ae604;
+            border-radius: 10px;
+            margin: 10px 10px 10px 10px;
+            padding: 5px 10px 5px 10px;
+        }
+    </style>
 </head>
-
 <body>
+    <!-- GUI Components -->
+    <div class="m-2 bg-white w-2/4 h-2/4 flex-auto" id="mainPanel">
 
+        <!-- Buttons -->
+        <div id="buttons">
+            <div id="repeat">Repeat</div>
+            <div id="prev">Previous</div>
+            <div id="play">Play/Pause</div>
+            <div id="next">Next</div>
+            <div id="shuffle">Shuffle</div>
+        </div>
+
+        <!-- Artist name and Artwork -->
+
+        <div id="artist">
+            <div id="name"></div>
+            <div id="artwork"></div>
+        </div>
+
+        <!-- Playlist -->
+
+        <div id="playlist"></div>
+
+        <!-- Settings -->
+
+        <div id="settings">
+            <div id="equalizer"></div>
+        </div>
+
+        <!-- Line Timer -->
+
+        <div id="timer"></div>
+
+        <!-- Music List -->
+
+        <div id="list"></div>
+    </div>
 </body>
-
 </html>
