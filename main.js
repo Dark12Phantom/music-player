@@ -12,6 +12,7 @@ function createMainWindow() {
             height: 760
         }
     );
+    mainWindow.setMenuBarVisibility(false)
 
     if (isDev) {
         mainWindow.webContents.openDevTools();
