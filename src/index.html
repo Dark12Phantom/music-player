@@ -15,21 +15,94 @@
         }
 
         #buttons{
+            top: 69vh;
+            left: 35vw;
+            width: 29.3vw;
+            position: absolute;
+            background-color: #ff0000;
+            border-radius: 0 0 10px 10px;
             display: flex;
-            justify-content: space-around;
+            align-items: center;
+            justify-content: center;
         }
 
         #repeat, #prev, #play, #next, #shuffle{
             border: solid 1px #6ae604;
             border-radius: 10px;
             margin: 10px 10px 10px 10px;
-            padding: 5px 10px 5px 10px;
+            padding-top: 10px;
+            position: relative;
+            background-color: #fff;
+            justify-content: space-around;
+        }
+        #play{
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+        }
+        #prev, #next{
+            width: 60px;
+            height: 60px;
+            border-radius: 90%;
+        }
+        #repeat, #shuffle{
+            width: 50px;
+            height: 40px;
+        }
+        #artist{
+            position: absolute;
+            background-color: #fff;
+            left: 35vw;
+            width: 400px;
+            height: 500px;
+            border-radius: 10px;
+        }
+        #art-wrapper{
+            padding: 10px 10px;
+        }
+        .art{
+            padding: 10px 10px;
+            border-radius: 15px;
+            background-color: #02020271;
+        }
+        #artist-name{
+            background-color: #0302024b;
+            position: relative;
+            border-radius: 20px;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            left: 20px;
+        }
+        #artist-name h4{
+            color: rgb(7, 4, 4);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            left: 20%;
+            position: relative;
         }
     </style>
 </head>
 <body>
     <!-- GUI Components -->
     <div class="m-2 bg-white w-2/4 h-2/4 flex-auto" id="mainPanel">
+        
+        <!-- Artist name and Artwork -->
+
+        <div id="artist">
+            <div id="artwork">
+                <div id="art-wrapper">
+                    <img class="art" src="images/png-transparent-the-dark-side-of-the-moon-pink-floyd-music-album-album-cover-purple-blue-angle.png" alt="">
+                </div>
+            </div>
+            <div id="name">
+                <div id="name-wrapper">
+                    <div id="artist-name">
+                        <h4>This line is for the artist name</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Buttons -->
         <div id="buttons">
@@ -38,13 +111,6 @@
             <div id="play">Play/Pause</div>
             <div id="next">Next</div>
             <div id="shuffle">Shuffle</div>
-        </div>
-
-        <!-- Artist name and Artwork -->
-
-        <div id="artist">
-            <div id="name"></div>
-            <div id="artwork"></div>
         </div>
 
         <!-- Playlist -->
