@@ -14,9 +14,9 @@ function createMainWindow() {
     );
     mainWindow.setMenuBarVisibility(false)
 
-    if (isDev) {
-        mainWindow.webContents.openDevTools();
-    }
+    // if (isDev) {
+    //     mainWindow.webContents.openDevTools();
+    // }
 
     mainWindow.loadFile(path.join(__dirname, './src/index.html'));
 }
