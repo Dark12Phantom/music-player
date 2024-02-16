@@ -1,9 +1,6 @@
 const path = require('path');
 const { app, BrowserWindow } = require('electron');
 
-const isDev = process.env.NODE_ENV !== 'development';
-const isWin = process.platform === 'win32';
-
 function createMainWindow() {
     const mainWindow = new BrowserWindow(
         {
@@ -12,11 +9,8 @@ function createMainWindow() {
             height: 760
         }
     );
-    mainWindow.setMenuBarVisibility(false)
-
-    // if (isDev) {
-    //     mainWindow.webContents.openDevTools();
-    // }
+    mainWindow.setMenuBarVisibility(false);
+    mainWindow.setResizable(false);
 
     mainWindow.loadFile(path.join(__dirname, './src/index.html'));
 }
@@ -30,9 +24,3 @@ app.whenReady().then(() => {
         }
     });
 });
-
-app.on('window-all-closed', () => {
-    if (!isWin) {
-        app.quit()
-    }
-})
