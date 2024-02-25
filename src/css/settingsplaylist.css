@@ -1,0 +1,9 @@
+#settings,
+#playlist {
+    position: relative;
+    top: 22px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}

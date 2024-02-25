@@ -1,0 +1,31 @@
+#shuffle,
+#repeat {
+    position: relative;
+    top: 17px;
+    background-image: linear-gradient(#3bc8f3b7, rgba(100, 146, 245, 0.644));
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    transition: 0.2s ease-in-out;
+}
+
+#shuffle:hover,
+#repeat:hover {
+    transform: scale(1.2);
+}
+
+#shuffle img {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 3.1px;
+    left: 2.5px;
+}
+
+#repeat img {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 3.1px;
+    left: 2.5px;
+}

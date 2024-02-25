@@ -1,0 +1,99 @@
+.app {
+    position: relative;
+    top: 6px;
+    background-image: linear-gradient(#1bc7fcc2, #13dd7f9d);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.2s ease-in;
+}
+
+.app:hover {
+    transform: scale(1.1);
+}
+
+.pause,
+.play {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+}
+
+.app .line {
+    position: absolute;
+    width: 5px;
+    height: 50%;
+    background: #000;
+    border-radius: 40px;
+    transition: all 400ms cubic-bezier(.8, 0, .32, 1);
+}
+
+.play .line {
+    margin: 25% 0;
+}
+
+.play .line-1 {
+    left: 30%;
+}
+
+.play .line-2 {
+    height: 56%;
+    left: 60%;
+    transform: rotate(-55deg) translateY(-128px) translateX(16px);
+    transition-delay: 100ms;
+}
+
+.play .line-3 {
+    height: 56%;
+    left: 60%;
+    transform: rotate(55deg) translateY(-128px) translateX(16px);
+    transition-delay: 100ms;
+}
+
+.play.active .line {
+    height: 62%;
+    margin: 20% 0;
+}
+
+.play.active .line-1 {
+    left: 30%;
+}
+
+.play.active .line-2 {
+    height: 56%;
+    left: 63%;
+    transform: rotate(-55deg) translateY(-10px) translateX(1px);
+}
+
+.play.active .line-3 {
+    height: 56%;
+    left: 63%;
+    transform: rotate(55deg) translateY(10.5px) translateX(2px);
+}
+
+
+.pause .line-1 {
+    margin: 25% 0;
+    left: 30%;
+}
+
+.pause .line-2 {
+    margin: 100% -16%;
+    right: 45%;
+    transition-delay: 200ms;
+}
+
+.pause.active .line-1 {
+    margin: 25% 0;
+    left: 30%;
+}
+
+.pause.active .line-2 {
+    margin: 25% 0;
+    right: 30%;
+}

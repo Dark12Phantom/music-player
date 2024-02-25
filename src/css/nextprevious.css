@@ -1,0 +1,76 @@
+#next,
+#previous {
+    position: relative;
+    top: 11px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(#d8d511b0, #88ff00ad);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.2s ease-in;
+}
+
+#next:hover,
+#previous:hover {
+    transform: scale(1.1);
+}
+
+#next .line,
+#previous .line {
+    position: absolute;
+    width: 5px;
+    height: 50%;
+    background: #000;
+    border-radius: 40px;
+    transition: all 400ms cubic-bezier(.8, 0, .32, 1);
+}
+
+#next .line {
+    margin: 25% 0;
+}
+
+#next .line-1 {
+    left: 23%;
+    height: 50%;
+}
+
+#next .line-2 {
+    height: 45%;
+    transform: rotate(-55deg) translateY(-5px) translateX(2px);
+}
+
+#next .line-3 {
+    height: 45%;
+    transform: rotate(55deg) translateY(5px) translateX(2px);
+}
+
+#next .line-4 {
+    right: 20%;
+}
+
+#previous .line {
+    margin: 25% 0;
+}
+
+#previous .line-1 {
+    right: 20%;
+    height: 50%;
+}
+
+#previous .line-2 {
+    height: 45%;
+    transform: rotate(55deg) translateY(-5px) translateX(-2px);
+}
+
+#previous .line-3 {
+    height: 45%;
+    transform: rotate(-55deg) translateY(5px) translateX(-2px);
+}
+
+#previous .line-4 {
+    left: 20%;
+}
