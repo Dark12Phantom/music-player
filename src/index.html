@@ -1,135 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
 
-    <link rel="stylesheet" href="output.css">
-
-    <style>
-        body{
-            background-color: #0c0c0c;
-            padding: 0;
-            margin: 0;
-        }
-
-        #buttons{
-            top: 69vh;
-            left: 35vw;
-            width: 29.3vw;
-            position: absolute;
-            background-color: #ff0000;
-            border-radius: 0 0 10px 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #repeat, #prev, #play, #next, #shuffle{
-            border: solid 1px #6ae604;
-            border-radius: 10px;
-            margin: 10px 10px 10px 10px;
-            padding-top: 10px;
-            position: relative;
-            background-color: #fff;
-            justify-content: space-around;
-        }
-        #play{
-            width: 70px;
-            height: 70px;
-            border-radius: 100%;
-        }
-        #prev, #next{
-            width: 60px;
-            height: 60px;
-            border-radius: 90%;
-        }
-        #repeat, #shuffle{
-            width: 50px;
-            height: 40px;
-        }
-        #artist{
-            position: absolute;
-            background-color: #fff;
-            left: 35vw;
-            width: 400px;
-            height: 500px;
-            border-radius: 10px;
-        }
-        #art-wrapper{
-            padding: 10px 10px;
-        }
-        .art{
-            padding: 10px 10px;
-            border-radius: 15px;
-            background-color: #02020271;
-        }
-        #artist-name{
-            background-color: #0302024b;
-            position: relative;
-            border-radius: 20px;
-            justify-content: center;
-            align-items: center;
-            width: 90%;
-            left: 20px;
-        }
-        #artist-name h4{
-            color: rgb(7, 4, 4);
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 20px;
-            left: 20%;
-            position: relative;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/playbutton.css">
+    <link rel="stylesheet" href="css/nextprevious.css">
+    <link rel="stylesheet" href="css/settingsplaylist.css">
+    <link rel="stylesheet" href="css/shufflerepeat.css">
+    <link rel="stylesheet" href="css/timer.css">
+    <link rel="stylesheet" href="css/artist.css">
 </head>
+
+<!-- GUI COMPONENTS -->
+
 <body>
-    <!-- GUI Components -->
-    <div class="m-2 bg-white w-2/4 h-2/4 flex-auto" id="mainPanel">
 
-        <!-- Buttons -->
-        <div id="buttons">
-            <div id="repeat"><img class="repeat" src="images/repeat.png" alt="" srcset=""></div>
-            <div id="prev"><img src="images/previous.png" alt="" class="prev"></div>
-            <div id="play"><img src="images/play.png" alt="" class="play"></div>
-            <div id="next"><img src="images/next.png" alt="" class="next"></div>
-            <div id="shuffle"><img src="images/shuffle.png" alt="" class="shuffle"></div>
-        </div>
-        
-        <!-- Artist name and Artwork -->
+    <main>
+        <!-- ARTIST -->
+        <section class="artist">
+            <div class="artwork"></div>
+            <div class="artist"></div>
+        </section>
 
-        <div id="artist">
-            <div id="artwork">
-                <div id="art-wrapper">
-                    <img class="art" src="images/png-transparent-the-dark-side-of-the-moon-pink-floyd-music-album-album-cover-purple-blue-angle.png" alt="">
+        <!-- LINE TIMER AND MAIN BUTTONS -->
+        <section class="line-and-button">
+            <div class="line-timer">
+                <div id="line">
+                    <div class="circle"></div>
                 </div>
             </div>
-            <div id="name">
-                <div id="name-wrapper">
-                    <div id="artist-name">
-                        <h4>This line is for the artist name</h4>
+
+            <div class="buttons">
+                <div id="settings"></div>
+                <div id="shuffle">
+                    <img src="images/arrow.png" alt="Shuffle">
+                </div>
+
+
+                <div id="previous">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                    <div class="line line-4"></div>
+                </div>
+
+                <div class="app">
+                    <div class="pause">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                    </div>
+                    <div class="play active">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
                     </div>
                 </div>
+
+                <div id="next">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                    <div class="line line-4"></div>
+                </div>
+
+                <div id="repeat">
+                    <img src="images/repeat.png" alt="Repeat">
+                </div>
+                <div id="playlist"></div>
             </div>
-        </div>
+        </section>
 
-        <!-- Playlist -->
+        <!-- OTHER BUTTONS -->
+        <section class="other-buttons">
+            <div class="music-list"></div>
+        </section>
+    </main>
 
-        <div id="playlist"></div>
-
-        <!-- Settings -->
-
-        <div id="settings">
-            <div id="equalizer"></div>
-        </div>
-
-        <!-- Line Timer -->
-
-        <div id="timer"></div>
-
-        <!-- Music List -->
-
-        <div id="list"></div>
-    </div>
 </body>
+
+<script src="js/play.js"></script>
+
 </html>
